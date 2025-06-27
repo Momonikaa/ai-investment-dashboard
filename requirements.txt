@@ -1,31 +1,11 @@
-# Core web app and UI
 streamlit
-
-# PDF parsing
 pymupdf
-pdfplumber
-
-# Embedding and vector search
 sentence-transformers
 faiss-cpu
-
-# Data analysis and Excel support
 pandas
 openpyxl
-
-# Visualization
 plotly
-
-# LLM APIs
 openai
 anthropic
 google-generativeai
-
-# General utilities
 numpy
-
-# (Optional) For local LLMs/Ollama, if you plan to use them in the future
-# ollama
-
-# (Optional) For robust file handling
-# python-dotenv
