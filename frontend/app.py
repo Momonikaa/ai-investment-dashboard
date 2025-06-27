@@ -1,5 +1,11 @@
 import sys
 import os
+
+# Initialize project root
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -7,11 +13,6 @@ import streamlit as st
 from sentence_transformers import SentenceTransformer
 from backend.pdf_utils import extract_text_from_pdf, chunk_text
 from backend.embedding_utils import get_embeddings, build_faiss_index
-
-# Initialize project root
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
 
 # --- LLM Response Functions ---
 def generate_local_response(prompt, context, portfolio_summary=""):
